@@ -1,0 +1,18 @@
+{
+  "name": "compluxd",
+  "version": "1.0.0",
+  "description": "A demon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akash Kurian Jose",
+  "license": "NA",
+  "dependencies": {
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
+    "socket.io": "^1.7.3",
+    "streamyjs": "^1.0.1",
+    "websocket": "^1.0.24"
+  }
+}
