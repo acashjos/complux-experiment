@@ -61,8 +61,8 @@ exports.init = (emit, cb) => {
 				};
 console.log(`Debug in browser: http://localhost:${process.env.UI_PORT}/${appList[appId].id}/` )
 				
-				// let desktopFile = addToDesktop(appList[appId]);
-				// require('./index').rememberToClean(desktopFile)
+				let desktopFile = addToDesktop(appList[appId]);
+				require('./index').rememberToClean(desktopFile)
 				require('./index').rememberToClean(iconpath)
 				if (walker.isMoving()) walker.walk();
 				else if (cb) cb()

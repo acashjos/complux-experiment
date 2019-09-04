@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
             Log.e(TAG, "IOException: " + e.getMessage());
+            Toast.makeText(this,"Failed to send broadcast. Make sure you're on a WiFi network",Toast.LENGTH_LONG);
         }
         return new HashMap<>();
     }
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 socket.setSoTimeout(TTL/3);
                 socket.receive(packet);
             } catch (Exception e){
-                // do nothing. timeout can throw IOException.
+                // do nothing. timeout throw IOException.
                 continue;
             }
             //Packet received
@@ -142,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         task.execute();
 
     }
-    public void serviceStarter(View view) {
-
-    }
+//    public void serviceStarter(View view) {
+//
+//    }
 }
